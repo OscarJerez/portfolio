@@ -1,6 +1,6 @@
 'use client'
 
-import { Zap, Award, Target } from 'lucide-react'
+import { Zap, Target, Award } from 'lucide-react'
 
 export default function About() {
   return (
@@ -9,20 +9,27 @@ export default function About() {
         <h2 className="section-title">About Me</h2>
 
         <div className="grid md:grid-cols-2 gap-12 mb-16">
-          {/* Bio */}
           <div className="space-y-6 animate-fade-in-up">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Hi! I'm Oscar Jerez, a passionate Full Stack Developer with 5+ years of experience building web applications and scalable solutions. I specialize in creating modern, user-centric applications that solve real-world problems.
+              I'm a newly graduated fullstack developer from NBI Handelsakademin in Göteborg,
+              with a background in C#/.NET 8, React/TypeScript and Python. I completed two
+              internships in real production environments — one at TMY Life / NutriWize building
+              a FastAPI backend for nutritional data, and one at InfinetCode AB shipping
+              features end-to-end on a fullstack e-learning platform.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              My journey in tech started with a passion for problem-solving and has evolved into a career focused on building products that matter. Whether it's a startup MVP or a complex enterprise system, I bring dedication, expertise, and creativity to every project.
+              Before switching to software, I spent 18 years as a professional driver — which
+              taught me punctuality, responsibility and how to stay calm under pressure. I bring
+              those same qualities to code: I take ownership of my modules, communicate clearly
+              in a team, and ship clean, testable work.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or mentoring junior developers. I believe in continuous learning and staying at the forefront of web development trends.
+              Outside of work I lead a taekwondo club (Bohus Taekwon-Do) in Nödinge and I'm
+              currently building AsyncGuard, a SaaS tool for monitoring Celery task failures,
+              and Clarity, an Android habit tracker in Kotlin.
             </p>
           </div>
 
-          {/* Stats & Highlights */}
           <div className="space-y-6">
             <div className="card">
               <div className="flex items-start space-x-4">
@@ -30,8 +37,11 @@ export default function About() {
                   <Zap className="text-blue-400" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Fast & Efficient</h3>
-                  <p className="text-gray-400">Building optimized applications with a focus on performance and user experience.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Clean Architecture</h3>
+                  <p className="text-gray-400">
+                    I default to Clean Architecture and CQRS — separating domain, application
+                    and infrastructure so code stays testable and easy to change.
+                  </p>
                 </div>
               </div>
             </div>
@@ -42,8 +52,11 @@ export default function About() {
                   <Target className="text-green-400" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Goal Oriented</h3>
-                  <p className="text-gray-400">Committed to delivering solutions that align with your business objectives.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Full Stack, End-to-End</h3>
+                  <p className="text-gray-400">
+                    From .NET APIs and PostgreSQL schemas to React frontends and Vercel
+                    deployments — I'm comfortable owning the whole feature.
+                  </p>
                 </div>
               </div>
             </div>
@@ -54,40 +67,31 @@ export default function About() {
                   <Award className="text-purple-400" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Professional</h3>
-                  <p className="text-gray-400">Maintaining high standards in code quality, communication, and project delivery.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">Team Player</h3>
+                  <p className="text-gray-400">
+                    Worked in agile teams of 6+ developers using Git branching, pull requests
+                    and code review as standard workflow.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Tech Stack */}
         <div className="card p-12">
           <h3 className="text-2xl font-bold text-white mb-8">Tech Stack</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {[
-              {
-                category: 'Backend',
-                techs: ['C#', 'Node.js', 'SQL', 'REST APIs']
-              },
-              {
-                category: 'Frontend',
-                techs: ['JavaScript', 'React.js', 'Tailwind CSS', 'Next.js']
-              },
-              {
-                category: 'Tools & Platforms',
-                techs: ['Git', 'Docker', 'AWS', 'Vercel']
-              }
+              { category: 'Backend', techs: ['C# / .NET 8', 'ASP.NET Core', 'Python', 'FastAPI', 'Entity Framework Core', 'JWT Auth'] },
+              { category: 'Frontend', techs: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'D3.js'] },
+              { category: 'Databases', techs: ['PostgreSQL', 'SQL Server', 'SQLite', 'Supabase', 'Redis'] },
+              { category: 'Tools & Platforms', techs: ['Git / GitHub', 'Docker', 'Vercel', 'GitHub Actions', 'Swagger', 'xUnit'] }
             ].map((stack, idx) => (
               <div key={idx}>
                 <h4 className="text-lg font-semibold text-blue-400 mb-4">{stack.category}</h4>
                 <div className="flex flex-wrap gap-2">
                   {stack.techs.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="bg-gray-700 text-gray-100 px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors"
-                    >
+                    <span key={i} className="bg-gray-700 text-gray-100 px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors">
                       {tech}
                     </span>
                   ))}

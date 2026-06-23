@@ -12,7 +12,7 @@ export default function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center space-x-2 bg-blue-900 bg-opacity-30 border border-blue-500 rounded-full px-4 py-2 w-fit">
               <Code2 size={16} className="text-blue-400" />
-              <span className="text-sm text-blue-300">Open to work · Göteborg / Remote</span>
+              <span className="text-sm text-blue-300">Open to work · Göteborg / Remote / Hybrid</span>
             </div>
 
             {/* Main Heading */}

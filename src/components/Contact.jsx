@@ -13,7 +13,7 @@ export default function Contact() {
         </p>
         <div className="flex items-center justify-center gap-2 text-gray-500 text-sm mb-12">
           <MapPin size={14} />
-          <span>Göteborg, Sverige · Open to hybrid & remote</span>
+          <span>Greater Gothenburg Area · Open to hybrid & remote</span>
         </div>
         <div className="grid sm:grid-cols-3 gap-4 max-w-xl mx-auto">
           <a href="mailto:oscj87@gmail.com" className="flex flex-col items-center gap-3 bg-gray-800 hover:bg-blue-600 border border-gray-700 hover:border-blue-500 text-white font-semibold py-6 px-4 rounded-xl transition-all duration-300">
@@ -29,9 +29,6 @@ export default function Contact() {
             <span className="text-sm">LinkedIn</span>
           </a>
         </div>
-        <p className="text-gray-600 text-sm mt-10">
-          📞 0700-147 671 &nbsp;·&nbsp; oscj87@gmail.com
-        </p>
       </div>
     </section>
   )

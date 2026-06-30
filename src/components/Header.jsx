@@ -1,79 +1,24 @@
-'use client'
-
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
-
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleMenu = () => setIsOpen(!isOpen)
-
-  const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#projects', label: 'Projects' },
-    { href: '#contact', label: 'Contact' },
-  ]
-
+  const links = [
+    ['About', '#about'],
+    ['Stack', '#stack'],
+    ['Skills', '#skills'],
+    ['Projects', '#projects'],
+  ];
   return (
-    <header className="fixed w-full top-0 z-50 bg-gray-900 bg-opacity-95 backdrop-blur-md border-b border-gray-700">
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="#" className="text-2xl font-bold gradient-text">
-              OJ
-            </a>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
-              >
-                {link.label}
-              </a>
-            ))}
-            <button className="btn-primary">
-              Get In Touch
-            </button>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none transition-colors"
-            >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+    <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)', background: 'rgba(15,23,42,0.55)', borderBottom: '1px solid rgba(148,163,184,0.12)' }}>
+      <div style={{ maxWidth: 1120, margin: '0 auto', padding: '16px 28px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <a href="#top" style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: "'Sora',sans-serif", fontWeight: 700, fontSize: 17, letterSpacing: '-0.01em', textDecoration: 'none', color: 'inherit' }}>
+          <span style={{ width: 26, height: 26, borderRadius: 7, background: 'linear-gradient(135deg,#22d3ee,#3b82f6)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#0f172a', fontSize: 13, fontWeight: 800 }}>OJ</span>
+          Oscar Jerez
+        </a>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 28 }}>
+          {links.map(([label, href]) => (
+            <a key={href} href={href} style={{ fontSize: 14, color: '#94a3b8', textDecoration: 'none' }}>{label}</a>
+          ))}
+          <a href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontSize: 14, fontWeight: 600, padding: '9px 16px', borderRadius: 9, border: '1px solid rgba(34,211,238,0.4)', color: '#22d3ee', textDecoration: 'none' }}>Contact</a>
         </div>
-
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-700">
-            <div className="flex flex-col space-y-4 pt-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-              <button className="btn-primary w-full">
-                Get In Touch
-              </button>
-            </div>
-          </div>
-        )}
-      </nav>
-    </header>
-  )
+      </div>
+    </nav>
+  );
 }

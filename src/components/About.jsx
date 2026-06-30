@@ -1,106 +1,61 @@
-'use client'
-
-import { Zap, Target, Award } from 'lucide-react'
+'use client';
+import Reveal from './Reveal';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800 bg-opacity-50">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="section-title">About Me</h2>
-
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          <div className="space-y-6 animate-fade-in-up">
-            <p className="text-lg text-gray-300 leading-relaxed">
-              I'm a newly graduated fullstack developer from NBI Handelsakademin in Göteborg,
-              with a background in C#/.NET 8, React/TypeScript and Python. I completed two
-              internships in real production environments — one at TMY Life / NutriWize building
-              a FastAPI backend for nutritional data, and one at InfinetCode AB shipping
-              features end-to-end on a fullstack e-learning platform.
+    <section id="about" style={{ position: 'relative', zIndex: 1, maxWidth: 1120, margin: '0 auto', padding: '60px 28px 70px' }}>
+      <Reveal style={{ marginBottom: 36 }}>
+        <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 13, color: '#22d3ee', marginBottom: 10 }}>// about me</div>
+        <h2 style={{ fontFamily: "'Sora',sans-serif", fontWeight: 700, fontSize: 'clamp(28px,4vw,40px)', letterSpacing: '-0.02em' }}>From the road to the codebase</h2>
+      </Reveal>
+      <Reveal>
+        <div style={{ display: 'grid', gridTemplateColumns: '1.15fr 0.85fr', gap: 44, alignItems: 'start' }}>
+          <div style={{ fontSize: 16, lineHeight: 1.75, color: '#94a3b8' }}>
+            <p style={{ marginBottom: 18 }}>
+              I'm a newly graduated fullstack developer from <span style={{ color: '#e2e8f0', fontWeight: 600 }}>NBI Handelsakademin, Göteborg 2026</span>. I completed two internships (LIA) in real production environments:
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Before switching to software, I spent 18 years as a professional driver — which
-              taught me punctuality, responsibility and how to stay calm under pressure. I bring
-              those same qualities to code: I take ownership of my modules, communicate clearly
-              in a team, and ship clean, testable work.
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, margin: '0 0 22px', paddingLeft: 18, borderLeft: '2px solid rgba(34,211,238,0.3)' }}>
+              <div><span style={{ color: '#e2e8f0', fontWeight: 600 }}>TMY Life / NutriWize</span> — built a Python/FastAPI backend for nutritional data.</div>
+              <div><span style={{ color: '#e2e8f0', fontWeight: 600 }}>InFiNet Code AB</span> — shipped features end-to-end on a fullstack .NET + Next.js e-learning platform.</div>
+            </div>
+            <p style={{ marginBottom: 18 }}>
+              Before switching to software I spent <span style={{ color: '#e2e8f0', fontWeight: 600 }}>18 years as a professional driver</span> — which taught me punctuality, responsibility and staying calm under pressure. I bring those same qualities to code: I take ownership, communicate clearly and ship clean, testable work.
             </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Outside of work I lead a taekwondo club (Bohus Taekwon-Do) in Nödinge and I'm
-              currently building AsyncGuard, a SaaS tool for monitoring Celery task failures,
-              and Clarity, an Android habit tracker in Kotlin.
+            <p style={{ marginBottom: 0 }}>
+              Outside work I'm one of the leaders at <span style={{ color: '#e2e8f0', fontWeight: 600 }}>Bohus Taekwon-Do</span> in Nödinge and I'm currently building <span style={{ color: '#22d3ee', fontWeight: 600 }}>Conversa</span> (AI chat widget for Swedish e-commerce) and <span style={{ color: '#22d3ee', fontWeight: 600 }}>Clarity</span> (Android habit tracker in Kotlin).
             </p>
           </div>
-
-          <div className="space-y-6">
-            <div className="card">
-              <div className="flex items-start space-x-4">
-                <div className="bg-blue-500 bg-opacity-20 p-3 rounded-lg">
-                  <Zap className="text-blue-400" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Clean Architecture</h3>
-                  <p className="text-gray-400">
-                    I default to Clean Architecture and CQRS — separating domain, application
-                    and infrastructure so code stays testable and easy to change.
-                  </p>
-                </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            <div style={{ padding: 22, borderRadius: 16, border: '1px solid rgba(148,163,184,0.14)', background: 'rgba(255,255,255,0.025)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" />
+                </svg>
+                <span style={{ fontFamily: "'Sora',sans-serif", fontWeight: 600, fontSize: 16, color: '#e2e8f0' }}>Clean Architecture</span>
               </div>
+              <p style={{ fontSize: 13.5, lineHeight: 1.55, color: '#94a3b8', margin: 0 }}>I default to Clean Architecture and CQRS, keeping code testable and easy to change.</p>
             </div>
-
-            <div className="card">
-              <div className="flex items-start space-x-4">
-                <div className="bg-green-500 bg-opacity-20 p-3 rounded-lg">
-                  <Target className="text-green-400" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Full Stack, End-to-End</h3>
-                  <p className="text-gray-400">
-                    From .NET APIs and PostgreSQL schemas to React frontends and Vercel
-                    deployments — I'm comfortable owning the whole feature.
-                  </p>
-                </div>
+            <div style={{ padding: 22, borderRadius: 16, border: '1px solid rgba(148,163,184,0.14)', background: 'rgba(255,255,255,0.025)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2v20" /><path d="M2 7l10 5 10-5" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
+                </svg>
+                <span style={{ fontFamily: "'Sora',sans-serif", fontWeight: 600, fontSize: 16, color: '#e2e8f0' }}>Full Stack End-to-End</span>
               </div>
+              <p style={{ fontSize: 13.5, lineHeight: 1.55, color: '#94a3b8', margin: 0 }}>From .NET APIs and PostgreSQL to React frontends and Vercel deployments.</p>
             </div>
-
-            <div className="card">
-              <div className="flex items-start space-x-4">
-                <div className="bg-purple-500 bg-opacity-20 p-3 rounded-lg">
-                  <Award className="text-purple-400" size={24} />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Team Player</h3>
-                  <p className="text-gray-400">
-                    Worked in agile teams of 6+ developers using Git branching, pull requests
-                    and code review as standard workflow.
-                  </p>
-                </div>
+            <div style={{ padding: 22, borderRadius: 16, border: '1px solid rgba(148,163,184,0.14)', background: 'rgba(255,255,255,0.025)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 8 }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+                <span style={{ fontFamily: "'Sora',sans-serif", fontWeight: 600, fontSize: 16, color: '#e2e8f0' }}>Team Player</span>
               </div>
+              <p style={{ fontSize: 13.5, lineHeight: 1.55, color: '#94a3b8', margin: 0 }}>Agile teams, Git branching, pull requests and code review as standard workflow.</p>
             </div>
           </div>
         </div>
-
-        <div className="card p-12">
-          <h3 className="text-2xl font-bold text-white mb-8">Tech Stack</h3>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { category: 'Backend', techs: ['C# / .NET 8', 'ASP.NET Core', 'Python', 'FastAPI', 'Entity Framework Core', 'JWT Auth'] },
-              { category: 'Frontend', techs: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'D3.js'] },
-              { category: 'Databases', techs: ['PostgreSQL', 'SQL Server', 'SQLite', 'Supabase', 'Redis'] },
-              { category: 'Tools & Platforms', techs: ['Git / GitHub', 'Docker', 'Vercel', 'GitHub Actions', 'Swagger', 'xUnit'] }
-            ].map((stack, idx) => (
-              <div key={idx}>
-                <h4 className="text-lg font-semibold text-blue-400 mb-4">{stack.category}</h4>
-                <div className="flex flex-wrap gap-2">
-                  {stack.techs.map((tech, i) => (
-                    <span key={i} className="bg-gray-700 text-gray-100 px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-600 transition-colors">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      </Reveal>
     </section>
-  )
+  );
 }

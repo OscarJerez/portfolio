@@ -5,6 +5,7 @@ import About from '@/components/About';
 import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+import CV from '@/components/CV';
 import Footer from '@/components/Footer';
 import ParticleBackground from '@/components/ParticleBackground';
 
@@ -19,6 +20,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact />
+      <CV />
       <Footer />
     </div>
   );

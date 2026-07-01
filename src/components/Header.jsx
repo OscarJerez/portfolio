@@ -4,6 +4,7 @@ export default function Header() {
     ['Stack', '#stack'],
     ['Skills', '#skills'],
     ['Projects', '#projects'],
+    ['CV', '#cv'],
   ];
   return (
     <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50, backdropFilter: 'blur(14px)', WebkitBackdropFilter: 'blur(14px)', background: 'rgba(15,23,42,0.55)', borderBottom: '1px solid rgba(148,163,184,0.12)' }}>

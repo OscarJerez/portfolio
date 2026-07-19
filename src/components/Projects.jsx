@@ -5,7 +5,7 @@ const PROJECTS = [
   {
     name: 'AsyncGuard',
     desc: 'Resilience toolkit for async .NET workflows with retry & circuit-breaker policies.',
-    tags: ['C#', '.NET 8'],
+    tags: ['C#', '.NET'],
     purpose: "Wraps calls to unreliable dependencies in retry, timeout, and circuit-breaker policies so transient failures don't cascade.",
     useCase: 'Calling a flaky third-party API and you want automatic retries with backoff, or a circuit breaker to stop hammering a downed service.',
   },

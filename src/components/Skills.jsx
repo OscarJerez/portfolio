@@ -3,7 +3,7 @@ import Reveal from './Reveal';
 import SkillBar from './SkillBar';
 
 const SKILLS = [
-  ['C# / .NET 8', 92],
+  ['C# / .NET', 92],
   ['React / TypeScript', 88],
   ['Python / FastAPI', 82],
   ['Next.js / Tailwind', 85],

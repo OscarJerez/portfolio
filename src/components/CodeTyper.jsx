@@ -19,7 +19,7 @@ export default function CodeTyper() {
       '',
       '    public Stack[] MyStack => new[]',
       '    {',
-      '        new(".NET 8",  "C#"),',
+      '        new(".NET",  "C#"),',
       '        new("React",   "TypeScript"),',
       '        new("FastAPI", "Python"),',
       '        new("Next.js", "Tailwind"),',

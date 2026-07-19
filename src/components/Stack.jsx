@@ -2,7 +2,7 @@
 import Reveal from './Reveal';
 
 const STACK = [
-  ['01', 'C# / .NET 8', 'Backend & APIs'],
+  ['01', 'C# / .NET', 'Backend & APIs'],
   ['02', 'React / TypeScript', 'Interfaces'],
   ['03', 'Python / FastAPI', 'Services & AI'],
   ['04', 'Next.js / Tailwind', 'Web apps'],

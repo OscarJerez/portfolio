@@ -103,6 +103,38 @@ body {
   border-color: rgba(34,211,238,0.55) !important;
   box-shadow: 0 26px 60px -16px rgba(34,211,238,0.42);
 }
+.project-detail {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, opacity .35s ease, margin-top .35s ease;
+}
+.project-card:hover .project-detail {
+  max-height: 220px;
+  opacity: 1;
+  margin-top: 14px;
+}
+.project-detail-inner {
+  border-top: 1px solid rgba(148,163,184,0.14);
+  padding-top: 12px;
+}
+.project-detail-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #22d3ee;
+  margin-bottom: 4px;
+}
+.project-detail-body {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #cbd5e1;
+  margin: 0 0 10px;
+}
+.project-detail-body:last-child {
+  margin-bottom: 0;
+}
 .contact-card:hover {
   transform: translateY(-5px);
   border-color: rgba(34,211,238,0.5) !important;

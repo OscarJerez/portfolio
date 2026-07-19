@@ -18,10 +18,10 @@ const PROJECTS = [
   },
   {
     name: 'Clarity',
-    desc: 'Minimal note-taking app focused on speed and a keyboard-first flow.',
-    tags: ['Next.js', 'TS'],
-    purpose: 'Capture, search, and navigate notes entirely from the keyboard, built for speed.',
-    useCase: 'You want to jot a thought mid-task without breaking flow, or need a fast scratchpad that opens instantly.',
+    desc: 'Android app that tracks screen time and flags burnout-risk days with pattern detection and nudges.',
+    tags: ['Kotlin', 'Compose', 'Android'],
+    purpose: 'Passively tracks phone usage and flags risk days — late-night work apps, phone use during your sleep window, addictive-app patterns — then nudges you with morning summaries and app timers.',
+    useCase: "You want your phone habits reflected back with real consequences, not just Apple Screen Time's stats you scroll past and ignore.",
   },
   {
     name: 'PersonalAgent',

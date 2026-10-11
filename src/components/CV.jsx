@@ -6,14 +6,14 @@ const CVS = [
   {
     lang: 'Svenska',
     label: 'SV',
-    file: '/portfolio/cv/Oscar-Jerez-CV-SV.pdf',
-    download: '/portfolio/cv/Oscar-Jerez-CV-SV.pdf',
+    file: '/cv/Oscar-Jerez-CV-SV.pdf',
+    download: '/cv/Oscar-Jerez-CV-SV.pdf',
   },
   {
     lang: 'English',
     label: 'EN',
-    file: '/portfolio/cv/Oscar-Jerez-CV-EN.pdf',
-    download: '/portfolio/cv/Oscar-Jerez-CV-EN.pdf',
+    file: '/cv/Oscar-Jerez-CV-EN.pdf',
+    download: '/cv/Oscar-Jerez-CV-EN.pdf',
   },
 ];
 

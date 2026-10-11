@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: 'Oscar Jerez - Full Stack Developer',
     description: 'Building scalable solutions for modern startups',
-    url: 'https://oscarjerez.dev',
+    url: 'https://oscarjerezportfolio.se',
     siteName: 'Oscar Jerez Portfolio',
     type: 'website',
   },
